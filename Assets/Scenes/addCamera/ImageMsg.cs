@@ -5,13 +5,21 @@ using System.Collections.Generic;
 using System.Text;
 using Unity.Robotics.ROSTCPConnector.MessageGeneration;
 
-namespace RosMessageTypes.Sensor
+namespace RosMessageTypes.Sensor    // using RosMessageTypes.Sensor; 로 임포트 가능 
 {
     [Serializable]
     public class ImageMsg : Message
     {
         public const string k_RosMessageName = "sensor_msgs/Image";
+        // /opt/ros/humble/share/sensor_msgs/msg/Image.msg
+        // “이 C# 클래스(ImageMsg)가 어떤 ROS 메시지를 표현하는지”
         public override string RosMessageName => k_RosMessageName;
+        /*
+            public override string RosMessageName { 
+                get { return k_RosMessageName; } 
+            }
+        */
+        // ROS 쪽 메시지 타입 이름과 Unity 쪽 클래스 이름을 이어주는 연결 다리 역할
 
         //  This message contains an uncompressed image
         //  (0, 0) is at top-left corner of image
