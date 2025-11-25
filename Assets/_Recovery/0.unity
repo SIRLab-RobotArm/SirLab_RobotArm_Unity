@@ -2407,16 +2407,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a05d5a75b69131b42893f1ad76762121, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MockControllerTester
-  poseTopic: /unity_target_pose
+  poseTopic: /left_arm_target_pose
   speed: 0.5
   radius: 0.1
-  jointTopic: /ik_joint_commands
-  joint1: {fileID: 1217435919}
-  joint2: {fileID: 1121591809}
-  joint3: {fileID: 1889694193}
-  joint4: {fileID: 1993852060}
-  gripperLeft: {fileID: 658681306}
-  gripperRight: {fileID: 1021503284}
+  jointTopic: /left_arm_joint_states
 --- !u!1001 &1105110663
 PrefabInstance:
   m_ObjectHideFlags: 0
