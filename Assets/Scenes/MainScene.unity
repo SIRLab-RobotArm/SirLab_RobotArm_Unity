@@ -932,7 +932,7 @@ GameObject:
   - component: {fileID: 231847169}
   - component: {fileID: 231847168}
   - component: {fileID: 231847167}
-  - component: {fileID: 231847166}
+  - component: {fileID: 231847171}
   m_Layer: 0
   m_Name: open_manipulator_x
   m_TagString: robot
@@ -958,28 +958,6 @@ Transform:
   - {fileID: 874195811}
   m_Father: {fileID: 2110789396}
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
---- !u!114 &231847166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 231847164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a05d5a75b69131b42893f1ad76762121, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MockControllerTester
-  poseTopic: /unity_target_pose
-  speed: 0.5
-  radius: 0.1
-  jointTopic: /ik_joint_commands
-  joint1: {fileID: 1996861515}
-  joint2: {fileID: 514538550}
-  joint3: {fileID: 1958115147}
-  joint4: {fileID: 441725024}
-  gripperLeft: {fileID: 477200814}
-  gripperRight: {fileID: 1241031691}
 --- !u!114 &231847167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1052,6 +1030,25 @@ MonoBehaviour:
   chosenAxis: 0
   currentOrientation: 0
   collisionExceptions: []
+--- !u!114 &231847171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231847164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d94ee3894d3860842ab4ad597a4b11eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ArmJointSubscriber
+  jointTopic: /ik_right_joint_commands
+  joint1: {fileID: 1996861515}
+  joint2: {fileID: 514538550}
+  joint3: {fileID: 1958115147}
+  joint4: {fileID: 441725024}
+  gripperLeft: {fileID: 477200814}
+  gripperRight: {fileID: 1241031691}
 --- !u!1 &245152411
 GameObject:
   m_ObjectHideFlags: 8
@@ -6759,13 +6756,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1081473704}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a05d5a75b69131b42893f1ad76762121, type: 3}
+  m_Script: {fileID: 11500000, guid: d94ee3894d3860842ab4ad597a4b11eb, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MockControllerTester
-  poseTopic: /unity_target_pose
-  speed: 0.5
-  radius: 0.1
-  jointTopic: /ik_joint_commands
+  m_EditorClassIdentifier: Assembly-CSharp::ArmJointSubscriber
+  jointTopic: /ik_left_joint_commands
   joint1: {fileID: 1217435919}
   joint2: {fileID: 1121591809}
   joint3: {fileID: 1889694193}
