@@ -32,6 +32,8 @@ public class ArmJointSubscriber : MonoBehaviour
             float rad = (float)msg.position[i];
             float deg = rad * Mathf.Rad2Deg;
 
+            Debug.Log($"Subscribed position: {msg.position}");
+
             switch (name)
             {
                 case "joint1":

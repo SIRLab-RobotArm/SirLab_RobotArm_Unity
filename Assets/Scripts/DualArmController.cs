@@ -69,6 +69,7 @@ public class DualArmController : MonoBehaviour
                 position = new PointMsg(pos.x, pos.y, pos.z),
                 orientation = new QuaternionMsg(rot.x, rot.y, rot.z, rot.w)
             }
+
         };
 
         ros.Publish(topicName, pose);
