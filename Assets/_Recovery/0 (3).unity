@@ -931,6 +931,7 @@ GameObject:
   - component: {fileID: 231847170}
   - component: {fileID: 231847169}
   - component: {fileID: 231847168}
+  - component: {fileID: 231847171}
   m_Layer: 0
   m_Name: open_manipulator_x
   m_TagString: robot
@@ -1015,6 +1016,26 @@ MonoBehaviour:
   chosenAxis: 0
   currentOrientation: 0
   collisionExceptions: []
+--- !u!114 &231847171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231847164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d94ee3894d3860842ab4ad597a4b11eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ArmJointSubscriber
+  topicName: 
+  joint1: {fileID: 1996861515}
+  joint2: {fileID: 514538550}
+  joint3: {fileID: 1958115147}
+  joint4: {fileID: 441725024}
+  gripL: {fileID: 477200814}
+  gripR: {fileID: 1241031691}
+  followSpeed: 5
 --- !u!1 &245152411
 GameObject:
   m_ObjectHideFlags: 8
@@ -2731,7 +2752,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &703476006
 Canvas:
   m_ObjectHideFlags: 0
@@ -2741,7 +2762,7 @@ Canvas:
   m_GameObject: {fileID: 703476003}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 2
+  m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -2763,8 +2784,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 703476003}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.299}
-  m_LocalScale: {x: 0.001, y: 0.001, z: 0.001}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1277852852}
@@ -2772,9 +2793,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.213, y: 0.334}
-  m_SizeDelta: {x: 640, y: 480}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &708248778
 GameObject:
   m_ObjectHideFlags: 8
@@ -4716,43 +4737,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.153
+      value: 0.314
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.404
+      value: 0.333
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.245
+      value: 1.536
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 0.92519796
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0.12092679
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9969291
+      value: -0.35743573
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.07830943
+      value: 0.04031391
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 8.983
+      value: 14.63
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: -42.337
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -0.702
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_Enabled
@@ -6655,7 +6676,7 @@ GameObject:
   - component: {fileID: 1081473706}
   - component: {fileID: 1081473705}
   - component: {fileID: 1081473711}
-  - component: {fileID: 1081473713}
+  - component: {fileID: 1081473712}
   m_Layer: 0
   m_Name: open_manipulator_x
   m_TagString: robot
@@ -6680,7 +6701,7 @@ MonoBehaviour:
   control: 0
   stiffness: 0
   damping: 0
-  forceLimit: 6.8
+  forceLimit: 0
   speed: 5
   torque: 100
   acceleration: 5
@@ -6740,7 +6761,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1081473713
+--- !u!114 &1081473712
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6749,22 +6770,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1081473704}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f3c97550c18bff40a5c317cd74c55ff, type: 3}
+  m_Script: {fileID: 11500000, guid: d94ee3894d3860842ab4ad597a4b11eb, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RobotVisualizer
+  m_EditorClassIdentifier: Assembly-CSharp::ArmJointSubscriber
+  topicName: 
   joint1: {fileID: 1217435919}
   joint2: {fileID: 1121591809}
   joint3: {fileID: 1889694193}
   joint4: {fileID: 1993852060}
-  gripperLeft: {fileID: 658681306}
-  gripperRight: {fileID: 1021503284}
-  rotationSpeed: 50
-  limitJ1: {x: -180, y: 180}
-  limitJ2: {x: -100, y: 90}
-  limitJ3: {x: -80, y: 80}
-  limitJ4: {x: -100, y: 110}
-  gripperOpenAngle: 0
-  gripperCloseAngle: -20
+  gripL: {fileID: 658681306}
+  gripR: {fileID: 1021503284}
+  followSpeed: 5
 --- !u!1001 &1105110663
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9556,6 +9572,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1463166670}
+  - component: {fileID: 1463166669}
   - component: {fileID: 1463166671}
   - component: {fileID: 1463166672}
   m_Layer: 0
@@ -9565,6 +9582,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1463166669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463166668}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce5873c3600660a47bc51d34b34a6c50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DualArmController
+  leftTopic: /left_arm_target_pose
+  rightTopic: /right_arm_target_pose
+  leftEndEffector: {fileID: 0}
+  rightEndEffector: {fileID: 0}
+  moveScale: 1
 --- !u!4 &1463166670
 Transform:
   m_ObjectHideFlags: 0
@@ -9605,7 +9639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e5a29e46caa50247b4a0b602c26cf58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ROSCameraReceiver
-  topicName: camera/camera/color/image_raw/compressed
+  topicName: /camera/color/image_raw/compressed
   cameraView: {fileID: 1277852853}
 --- !u!1 &1466892183
 GameObject:
